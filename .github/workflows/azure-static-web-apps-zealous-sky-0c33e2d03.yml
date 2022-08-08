@@ -27,6 +27,7 @@ jobs:
         with:
           submodules: true
       - run: pip install dbt-postgres
+      - run: psql -c "CREATE DATABASE jaffle_shop" -d postgres -U postgres
       - run: dbt docs generate --profiles-dir=./ci
       - name: Build And Deploy
         id: builddeploy
