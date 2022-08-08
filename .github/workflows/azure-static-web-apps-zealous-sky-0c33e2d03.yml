@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
       - run: pip install dbt-postgres
-      - run: dbt docs generate
+      - run: dbt docs generate --profiles-dir=./ci
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
