@@ -4,8 +4,8 @@ jaffle_shop:
     dev:
       type: postgres
       host: localhost
-      user: ""
-      password: ""
+      user: postgres
+      password: postgres
       port: 5432
       dbname: jaffle_shop
       schema: dwh
